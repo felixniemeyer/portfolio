@@ -11,7 +11,7 @@ const beliefs = [
     line: 'Speed matters more than time.',
     note: 'Deadlines are chances to make the current state presentable, not the measure of its value.',
   },
-  { line: 'Never work without knowing why.', note: 'Not without knowing exactly what on, and why.' },
+  { line: 'Never work without knowing why.', note: 'Why, on what, and what for — all three, exactly.' },
   {
     line: 'Techno-optimism, unapologetically.',
     note: 'In my art master’s I was pretty much the only one excited about where technology is heading, so I left and made the art on my own. Tools — and now AI — let people realize ideas far bigger than themselves.',
