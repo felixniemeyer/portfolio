@@ -106,6 +106,7 @@ export const works: Work[] = [
     kind: 'platform · protocol',
     text: 'A marketplace for web-based visuals, plus the open-source stack around it: a protocol to steer an artwork from a touchscreen in another tab or device, a live controller and a timeline editor.',
     link: 'https://avonx.space/',
+    image: 'https://i.ytimg.com/vi/ON_HjSk2mFM/hqdefault.jpg',
     hue: 260,
   },
   {
