@@ -53,7 +53,7 @@ async function copy() {
     </div>
     <footer class="mono">
       <span>“Whenever I get asked for my CV I realize I’m unemployable.”</span>
-      <span>© {{ new Date().getFullYear() }} Felix Niemeyer · Vue + one fragment shader</span>
+      <span>© {{ new Date().getFullYear() }} Felix Niemeyer · built with Vue</span>
     </footer>
   </section>
 </template>
