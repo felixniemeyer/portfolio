@@ -1,0 +1,140 @@
+@import '@fontsource-variable/fraunces/opsz.css';
+@import '@fontsource-variable/fraunces/opsz-italic.css';
+@import '@fontsource-variable/jetbrains-mono';
+
+:root {
+  --bg: #05050a;
+  --panel: rgba(8, 8, 15, 0.82);
+  --fg: #ebe7f5;
+  --muted: #8e8aa6;
+  --line: rgba(235, 231, 245, 0.1);
+  --cyan: #6ef2ff;
+  --pink: #ff5fa8;
+  --amber: #ffc65c;
+
+  --serif: 'Fraunces Variable', Georgia, serif;
+  --mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  --fs-s: 0.8rem;
+  --fs-m: 1.1rem;
+  --fs-l: clamp(1.7rem, 3.4vw, 2.6rem);
+  --fs-xl: clamp(3.2rem, 11vw, 8.5rem);
+
+  --gutter: clamp(16px, 5vw, 64px);
+  --max: 1180px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: var(--fs-m);
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--cyan) 50%, transparent);
+  text-underline-offset: 0.2em;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--cyan);
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--fs-l);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+
+  & em {
+    color: var(--cyan);
+  }
+}
+
+h3 {
+  font-size: var(--fs-m);
+  font-weight: 600;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: var(--fs-s);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+section.panel {
+  position: relative;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  padding: clamp(64px, 12vw, 140px) var(--gutter);
+
+  & > .inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  & .head {
+    display: grid;
+    gap: 12px;
+    margin-bottom: clamp(32px, 6vw, 64px);
+    max-width: 44ch;
+  }
+}
+
+/* scroll reveal, see main.ts */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s var(--ease),
+    transform 0.9s var(--ease);
+  transition-delay: var(--delay, 0s);
+
+  &.shown {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--bg);
+}
