@@ -48,6 +48,8 @@ export interface Work {
   youtube?: string
   hue: number
   wide?: boolean
+  // show the whole image, e.g. a round domemaster frame
+  contain?: boolean
 }
 
 export const reel = {
@@ -57,6 +59,16 @@ export const reel = {
 }
 
 export const works: Work[] = [
+  {
+    title: 'Onyx Orbital',
+    kind: 'fulldome',
+    text: 'A fulldome piece in collaboration with the Berlin-based Actias.',
+    link: 'https://www.youtube.com/watch?v=ACkpjPBUipg',
+    youtube: 'ACkpjPBUipg',
+    hue: 300,
+    wide: true,
+    contain: true,
+  },
   {
     title: 'Aimparency',
     kind: 'open source · since 2017',

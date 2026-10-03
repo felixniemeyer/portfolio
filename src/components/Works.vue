@@ -21,7 +21,7 @@ import { works } from '../data'
           rel="noopener"
           :style="{ '--hue': work.hue }"
         >
-          <div class="media">
+          <div class="media" :class="{ contain: work.contain }">
             <img
               v-if="work.youtube || work.image"
               :src="work.youtube ? `https://i.ytimg.com/vi/${work.youtube}/hqdefault.jpg` : work.image"
@@ -47,6 +47,7 @@ import { works } from '../data'
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-auto-flow: dense;
   gap: 20px;
 }
 
@@ -100,6 +101,13 @@ import { works } from '../data'
       object-fit: cover;
       display: block;
       transition: transform 0.8s var(--ease);
+    }
+
+    &.contain {
+      background: #000;
+      & img {
+        object-fit: contain;
+      }
     }
 
     & .rings {
