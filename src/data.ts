@@ -47,19 +47,17 @@ export interface Work {
   wide?: boolean
 }
 
+export const reel = {
+  title: 'Showreel 2023–24',
+  caption: 'web artworks in TypeScript × WebGL',
+  youtube: 'qSFPjT7S720',
+}
+
 export const works: Work[] = [
   {
-    title: 'Showreel 2023–24',
-    kind: 'web artworks',
-    text: 'Gliders, dragons, music boxes and other things that happen in a canvas.',
-    link: 'https://youtu.be/qSFPjT7S720',
-    youtube: 'qSFPjT7S720',
-    hue: 100,
-    wide: true,
-  },
-  {
     title: 'Aimparency',
-    kind: 'tool · since 2017',
+    kind: 'open source · since 2017',
+    wide: true,
     text: 'A local-first graph for breaking ideas into realizable steps — next to real repos, shared between humans and agents. Open source on GitHub.',
     link: 'https://github.com/aimparency/v7',
     image: '/img/aimparency.webp',
@@ -98,9 +96,10 @@ export const works: Work[] = [
   },
   {
     title: 'entour.fyi',
-    kind: 'for travelers',
+    kind: 'live · for travelers',
     text: 'Draw where you went, pin photos and stories to the way.',
     link: 'https://entour.fyi',
+    image: '/img/entour.webp',
     hue: 120,
   },
   {
@@ -141,6 +140,30 @@ export const works: Work[] = [
     link: 'https://youtu.be/GMfG0bsNeqY',
     youtube: 'GMfG0bsNeqY',
     hue: 190,
+  },
+]
+
+export interface Next {
+  title: string
+  text: string
+}
+
+export const next: Next[] = [
+  {
+    title: 'A dome on the workbench',
+    text: 'A small projection rig to develop fulldome visuals at studio scale — and to invite others to see their work curved over their heads before it ever reaches a planetarium.',
+  },
+  {
+    title: 'Visuals that listen',
+    text: 'Live visuals for concerts and listening sessions that anticipate the beat instead of chasing it, steerable from any phone in the room.',
+  },
+  {
+    title: 'An open jam',
+    text: 'A regular, low-threshold session like the one I started at Grand Hotel Cosmopolis. Bring an instrument, a synth or a laptop.',
+  },
+  {
+    title: 'Tools for what comes next',
+    text: 'AI is about to make individual people capable of much bigger projects. I build open tools for that and love to argue about where it leads — in talks, workshops, over coffee.',
   },
 ]
 

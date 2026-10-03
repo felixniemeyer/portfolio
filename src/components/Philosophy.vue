@@ -39,7 +39,7 @@ const selected = computed(() => phases.find((p) => p.name === selectedName.value
   <section id="beliefs" class="panel">
     <div class="inner">
       <div class="head" v-reveal>
-        <p class="mono">03 — beliefs</p>
+        <p class="mono">04 — beliefs</p>
         <h2>Some things I hold <em>to be useful</em>, if not true.</h2>
       </div>
 

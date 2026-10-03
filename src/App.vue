@@ -2,11 +2,12 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import Hero from './components/Hero.vue'
 import Works from './components/Works.vue'
+import Next from './components/Next.vue'
 import Mentionables from './components/Mentionables.vue'
 import Philosophy from './components/Philosophy.vue'
 import Contact from './components/Contact.vue'
 
-const sections = ['works', 'mentionables', 'beliefs', 'contact']
+const sections = ['works', 'next', 'mentionables', 'beliefs', 'contact']
 const current = ref('')
 const scrolled = ref(false)
 
@@ -43,6 +44,7 @@ onBeforeUnmount(() => {
   <Hero />
   <main>
     <Works />
+    <Next />
     <Mentionables />
     <Philosophy />
     <Contact />
@@ -113,7 +115,7 @@ nav {
   }
 
   @media (max-width: 520px) {
-    & .links a:nth-child(2) {
+    & .links a:nth-child(3) {
       display: none;
     }
   }

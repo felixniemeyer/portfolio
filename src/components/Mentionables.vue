@@ -14,7 +14,7 @@ function toggle(tag: Tag) {
   <section id="mentionables" class="panel">
     <div class="inner">
       <div class="head" v-reveal>
-        <p class="mono">02 — mentionables</p>
+        <p class="mono">03 — mentionables</p>
         <h2>A ledger of things worth <em>mentioning</em>, from jam sessions to planetaria.</h2>
       </div>
 

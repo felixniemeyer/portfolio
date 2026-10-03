@@ -27,8 +27,8 @@ async function copy() {
   <section id="contact" class="panel">
     <div class="inner">
       <div class="head" v-reveal>
-        <p class="mono">04 — contact</p>
-        <h2>Let’s make some <em>ripples</em>.</h2>
+        <p class="mono">05 — contact</p>
+        <h2>Let’s talk <em>futures</em>.</h2>
         <p>
           I want to meet the most interesting people in tech: thinkers, idealists, hackers. People building strange
           tools, coordination systems, art machines, or AI that helps humans realize what they actually want. If
