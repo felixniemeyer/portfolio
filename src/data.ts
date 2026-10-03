@@ -18,7 +18,7 @@ export const mentionables: Mentionable[] = [
   { year: '2025', title: 'Guest lecture: programming visuals for planetaria', where: 'Hochschule Bremen', tag: 'teaching' },
   { year: '2025', title: 'Online workshop: fulldome visuals with modern AI tools', where: 'TH Lübeck', tag: 'teaching', link: 'https://dlc.sh/lernangebot/5519' },
   { year: '2025', title: 'Festival WiFi for ~5000 people via Starlink + 5G fallback', where: 'Wilde Möhre', tag: 'life' },
-  { year: '—', title: 'Started a regular community jam session', where: 'Grand Hotel Cosmopolis, Augsburg', tag: 'music' },
+  { year: '—', title: 'Started a regular open jam — community music', where: 'Grandhotel Cosmopolis, Augsburg', tag: 'music' },
   { year: '—', title: 'Recorded jam sessions with friends', where: 'Hupfeldcenter, Leipzig', tag: 'music', link: 'https://soundcloud.com/fairlix/sets/hupfeldcenter-leipzig-jam-session-recordings' },
   { year: '2024', title: 'Browser-based projection mapping, Triebwerke stage', where: 'Fusion Festival', tag: 'visuals', link: 'https://www.youtube.com/watch?v=Mu_5WgnE25M' },
   { year: '2024', title: 'Gliders VR, Dragons, Music Box — WebXR & WebAudio pieces', tag: 'visuals', link: 'https://gfx.aimparency.org/gliders-vr/' },
@@ -30,9 +30,12 @@ export const mentionables: Mentionable[] = [
   { year: '2022', title: 'Eyesoup — WebGL meets pose estimation', tag: 'visuals', link: 'https://gfx.aimparency.org/eyesoup/' },
   { year: '2021', title: '$5k community grant for a-jam, turn-based jam sessions', where: 'IPFS', tag: 'music', link: 'https://github.com/felixniemeyer/a-jam' },
   { year: '2019', title: 'Sense — an artful indie game', where: 'Revision demoparty', tag: 'visuals' },
+  { year: '2019', title: 'Volunteered at an artistic social project', where: 'Grandhotel Cosmopolis, Augsburg', tag: 'life' },
   { year: '2018', title: 'Exchange semester, a little Mandarin', where: 'Peking University', tag: 'life' },
+  { year: '—', title: 'GPU particle aquarium in Rust & Vulkan', tag: 'visuals', link: 'https://github.com/felixniemeyer/aquarium' },
   { year: '2017', title: 'Started Aimparency — mapping how ideas get realized', tag: 'tools' },
   { year: '2015', title: 'IT consultant for BMW Bank & ING DiBa', where: 'Senacor', tag: 'life' },
+  { year: '2012', title: 'Student assistant — web apps for personalized medicine research', where: 'HPI Potsdam', tag: 'life' },
   { year: '2011', title: 'Real-time Mandelbrot explorer on the GPU — my school final project', tag: 'visuals' },
 ]
 
@@ -72,6 +75,13 @@ export const works: Work[] = [
     hue: 320,
   },
   {
+    title: 'Dome Control',
+    kind: 'multiplayer fulldome',
+    text: 'The audience picks up their phones and steers the planetarium together — orientation sensors fly a shared camera through raymarched worlds, over WebRTC.',
+    link: 'https://avonx.space/',
+    hue: 200,
+  },
+  {
     title: 'Von Ton zu Ton',
     kind: 'AR sound installation',
     text: 'Point your phone at virtual shapes, morph them with your fingers. The same raymarching shader renders image and sound.',
@@ -82,7 +92,7 @@ export const works: Work[] = [
   {
     title: 'avonx & av-controls',
     kind: 'platform · protocol',
-    text: 'A marketplace for web-based visuals, plus a protocol to steer an artwork in one tab from a touchscreen in another.',
+    text: 'A marketplace for web-based visuals, plus the open-source stack around it: a protocol to steer an artwork from a touchscreen in another tab or device, a live controller and a timeline editor.',
     link: 'https://avonx.space/',
     hue: 260,
   },
@@ -134,6 +144,14 @@ export const works: Work[] = [
     hue: 230,
   },
   {
+    title: 'Aquarium',
+    kind: 'Rust · Vulkan',
+    text: 'A GPU particle system, written close to the metal.',
+    link: 'https://youtu.be/5SW9_pk5zME',
+    youtube: '5SW9_pk5zME',
+    hue: 180,
+  },
+  {
     title: 'Showreel 2024–25',
     kind: 'TypeScript × WebGL',
     text: 'A year of real-time visuals for clubs, festivals and domes. Everything runs in a browser tab.',
@@ -143,32 +161,34 @@ export const works: Work[] = [
   },
 ]
 
-export interface Next {
-  title: string
-  text: string
-}
-
-export const next: Next[] = [
-  {
-    title: 'A dome on the workbench',
-    text: 'A small projection rig to develop fulldome visuals at studio scale — and to invite others to see their work curved over their heads before it ever reaches a planetarium.',
-  },
-  {
-    title: 'Visuals that listen',
-    text: 'Live visuals for concerts and listening sessions that anticipate the beat instead of chasing it, steerable from any phone in the room.',
-  },
-  {
-    title: 'An open jam',
-    text: 'A regular, low-threshold session like the one I started at Grand Hotel Cosmopolis. Bring an instrument, a synth or a laptop.',
-  },
-  {
-    title: 'Tools for what comes next',
-    text: 'AI is about to make individual people capable of much bigger projects. I build open tools for that and love to argue about where it leads — in talks, workshops, over coffee.',
-  },
-]
-
 export const contact = {
   email: 'niemeyer.felix@gmail.com',
   github: 'https://github.com/felixniemeyer',
   soundcloud: 'https://soundcloud.com/fairlix',
+}
+
+export interface Track {
+  title: string
+  text: string
+  link: string
+}
+
+export const music = {
+  jam: {
+    title: 'Open jam at Grandhotel Cosmopolis',
+    text: 'A regular community music round I started in Augsburg, connected to Marja Burchard of Embryo and the phenomenon of community music.',
+  },
+  tracks: [
+    {
+      title: 'Hupfeldcenter jam sessions',
+      text: 'Recorded with friends in Leipzig.',
+      link: 'https://soundcloud.com/fairlix/sets/hupfeldcenter-leipzig-jam-session-recordings',
+    },
+  ] as Track[],
+  built: [
+    { title: 'a-jam', text: 'turn-based jam sessions in the browser', link: 'https://github.com/felixniemeyer/a-jam' },
+    { title: 'Von Ton zu Ton', text: 'AR shapes you can play', link: 'https://www.youtube.com/watch?v=EfrT8ds3aJU' },
+    { title: 'Dance', text: 'a net that hears the kick coming', link: 'https://github.com/felixniemeyer/dance' },
+    { title: 'Music Box', text: 'my first WebAudio piece', link: 'https://gfx.aimparency.org/music-box/' },
+  ] as Track[],
 }

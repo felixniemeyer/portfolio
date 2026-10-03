@@ -2,12 +2,12 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import Hero from './components/Hero.vue'
 import Works from './components/Works.vue'
-import Next from './components/Next.vue'
+import Music from './components/Music.vue'
 import Mentionables from './components/Mentionables.vue'
 import Philosophy from './components/Philosophy.vue'
 import Contact from './components/Contact.vue'
 
-const sections = ['works', 'next', 'mentionables', 'beliefs', 'contact']
+const sections = ['works', 'music', 'mentionables', 'beliefs', 'contact']
 const current = ref('')
 const scrolled = ref(false)
 
@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
   <Hero />
   <main>
     <Works />
-    <Next />
+    <Music />
     <Mentionables />
     <Philosophy />
     <Contact />
