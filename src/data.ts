@@ -48,6 +48,7 @@ export interface Work {
   youtube?: string
   hue: number
   wide?: boolean
+  code?: string
   // show the whole image, e.g. a round domemaster frame
   contain?: boolean
 }
@@ -90,7 +91,8 @@ export const works: Work[] = [
     title: 'Dome Control',
     kind: 'multiplayer fulldome',
     text: 'The audience picks up their phones and steers the planetarium together — orientation sensors fly a shared camera through raymarched worlds, over WebRTC.',
-    link: 'https://avonx.space/',
+    link: 'https://www.instagram.com/reel/Da-R67aO0nX/',
+    code: 'https://github.com/felixniemeyer/domecontrol',
     hue: 200,
   },
   {
@@ -107,6 +109,7 @@ export const works: Work[] = [
     text: 'A marketplace for web-based visuals, plus the open-source stack around it: a protocol to steer an artwork from a touchscreen in another tab or device, a live controller and a timeline editor.',
     link: 'https://avonx.space/',
     image: 'https://i.ytimg.com/vi/ON_HjSk2mFM/hqdefault.jpg',
+    code: 'https://github.com/avonx2/av-controls',
     hue: 260,
   },
   {

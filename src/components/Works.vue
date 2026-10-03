@@ -10,15 +10,12 @@ import { works } from '../data'
         <h2>Things that run in a browser tab, <em>under domes</em>, on stages and in repos.</h2>
       </div>
       <div class="grid">
-        <a
+        <article
           v-for="(work, i) in works"
           :key="work.title"
           v-reveal="i % 3"
           class="card"
           :class="{ wide: work.wide }"
-          :href="work.link"
-          target="_blank"
-          rel="noopener"
           :style="{ '--hue': work.hue }"
         >
           <div class="media" :class="{ contain: work.contain }">
@@ -34,10 +31,13 @@ import { works } from '../data'
           </div>
           <div class="body">
             <p class="mono">{{ work.kind }}</p>
-            <h3>{{ work.title }}</h3>
+            <h3>
+              <a class="primary" :href="work.link" target="_blank" rel="noopener">{{ work.title }}</a>
+            </h3>
             <p class="text">{{ work.text }}</p>
+            <a v-if="work.code" class="mono code" :href="work.code" target="_blank" rel="noopener">code ↗</a>
           </div>
-        </a>
+        </article>
       </div>
     </div>
   </section>
@@ -53,6 +53,8 @@ import { works } from '../data'
 
 .card {
   --tint: hsl(var(--hue) 100% 70%);
+  position: relative;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -149,6 +151,30 @@ import { works } from '../data'
 
   & h3 {
     transition: color 0.3s;
+  }
+
+  /* the title link covers the whole card; secondary links sit above it */
+  & .primary {
+    text-decoration: none;
+    &,
+    &:hover {
+      color: inherit;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  & .code {
+    position: relative;
+    justify-self: start;
+    margin-top: 4px;
+    text-decoration: none;
+    &:hover {
+      color: var(--tint);
+    }
   }
 
   & .text {
