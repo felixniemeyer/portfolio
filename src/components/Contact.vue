@@ -47,6 +47,8 @@ async function copy() {
       <p class="links mono" v-reveal>
         <a :href="contact.github" target="_blank" rel="noopener">github</a>
         <a :href="contact.soundcloud" target="_blank" rel="noopener">soundcloud</a>
+        <a :href="contact.youtube" target="_blank" rel="noopener">youtube</a>
+        <a :href="contact.instagram" target="_blank" rel="noopener">instagram</a>
       </p>
     </div>
     <footer class="mono">
@@ -116,7 +118,8 @@ async function copy() {
 
 .links {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 12px 24px;
   margin-top: 24px;
 }
 

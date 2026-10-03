@@ -165,6 +165,8 @@ export const contact = {
   email: 'niemeyer.felix@gmail.com',
   github: 'https://github.com/felixniemeyer',
   soundcloud: 'https://soundcloud.com/fairlix',
+  youtube: 'https://www.youtube.com/@meowcrobe',
+  instagram: 'https://instagram.com/fairlix',
 }
 
 export interface Track {
@@ -179,6 +181,11 @@ export const music = {
     text: 'A regular community music round I started in Augsburg, connected to Marja Burchard of Embryo and the phenomenon of community music.',
   },
   tracks: [
+    {
+      title: 'Seven Sketches',
+      text: 'An album of seven songs.',
+      link: 'https://www.youtube.com/playlist?list=PL1InbvtAEdhYEEp44h2rz9InanjzMrNM2',
+    },
     {
       title: 'Hupfeldcenter jam sessions',
       text: 'Recorded with friends in Leipzig.',

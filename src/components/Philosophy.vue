@@ -8,17 +8,13 @@ const beliefs = [
     note: 'Realize ideas and see what happens — the most beautiful, least probable ones too. When I miss, I spend three days understanding why and do better next time.',
   },
   {
-    line: 'All ideas are optional.',
-    note: 'Freedom means being able to move along ideas. Priorities shift, and that is steering, not failing.',
-  },
-  {
     line: 'Speed matters more than time.',
     note: 'Deadlines are chances to make the current state presentable, not the measure of its value.',
   },
-  { line: 'Never work without knowing why.', note: 'What on, what for, and why me. If I can’t answer, I stop and find out.' },
+  { line: 'Never work without knowing why.', note: 'Not without knowing exactly what on, and why.' },
   {
     line: 'Techno-optimism, unapologetically.',
-    note: 'I left an art master’s partly because I was alone with mine. Tools — and now AI — let people realize ideas far bigger than themselves.',
+    note: 'In my art master’s I was pretty much the only one excited about where technology is heading, so I left and made the art on my own. Tools — and now AI — let people realize ideas far bigger than themselves.',
   },
 ]
 
