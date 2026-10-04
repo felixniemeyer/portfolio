@@ -30,9 +30,8 @@ async function copy() {
         <p class="mono">05 — contact</p>
         <h2>Let’s talk <em>futures</em>.</h2>
         <p>
-          I want to meet the most interesting people in tech: thinkers, idealists, hackers. People building strange
-          tools, coordination systems, art machines, or AI that helps humans realize what they actually want. If
-          that’s you, write me.
+          I want to meet interesting people: thinkers, idealists, artists, musicians — people entangling their work
+          and lives with AI. If that’s you, write me.
         </p>
       </div>
 

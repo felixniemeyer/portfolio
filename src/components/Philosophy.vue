@@ -18,13 +18,16 @@ const born = new Date(1993, 6, 13)
 const age = Math.floor((Date.now() - born.getTime()) / (365.25 * 24 * 3600 * 1000))
 const span = 90
 
-// overlapping raised-cosine curves: take peaks at birth and is gone by 30,
-// make peaks at 45, give grows towards 90
-const bump = (x: number) => (Math.abs(x) < 1 ? 0.5 * (1 + Math.cos(Math.PI * x)) : 0)
+// cosine crossfades between the peaks (0, 45, 90): neighbours cross at 50%, never linearly
+const ease = (t: number) => 0.5 - 0.5 * Math.cos(Math.PI * Math.min(Math.max(t, 0), 1))
 const phases = [
-  { name: 'take', weight: (a: number) => (a < 30 ? bump(a / 30) : 0), text: 'Take in as much as possible.' },
-  { name: 'make', weight: (a: number) => bump((a - 45) / 30), text: 'Start projects, meet and inspire people, move matter.' },
-  { name: 'give', weight: (a: number) => (a > 50 ? bump((a - 90) / 40) : 0), text: 'Give back, and choose who carries things on.' },
+  { name: 'take', weight: (a: number) => 1 - ease(a / 45), text: 'Take in as much as possible.' },
+  {
+    name: 'make',
+    weight: (a: number) => (a < 45 ? ease(a / 45) : 1 - ease((a - 45) / 45)),
+    text: 'Start projects, meet and inspire people, move matter.',
+  },
+  { name: 'give', weight: (a: number) => ease((a - 45) / 45), text: 'Give back, and choose who carries things on.' },
 ]
 
 const W = 900
@@ -36,7 +39,7 @@ const paths = phases.map((p) => {
   const line = ages.map((a) => `${x(a).toFixed(1)},${y(p.weight(a)).toFixed(1)}`).join(' L')
   return { name: p.name, line: `M${line}`, area: `M${x(0)},${y(0)} L${line} L${x(span)},${y(0)} Z` }
 })
-const ticks = [0, 30, 45, 60, 90]
+const ticks = [0, 45, 90]
 
 const dominant = phases.reduce((best, p) => (p.weight(age) > best.weight(age) ? p : best))
 const selectedName = ref(dominant.name)
@@ -62,7 +65,7 @@ const selected = computed(() => phases.find((p) => p.name === selectedName.value
       <div class="life" v-reveal>
         <h3>Take, make, give.</h3>
         <p class="mono">a rough structure for a life — the phases blend</p>
-        <svg class="curves" :viewBox="`0 0 ${W} ${H}`" role="img" aria-label="take peaks at birth, make at 45, give at 90">
+        <svg class="curves" :viewBox="`0 0 ${W} ${H}`" role="img" aria-label="take peaks at birth, make at 45, give at 90; neighbours cross at half">
           <line class="axis" :x1="0" :x2="W" :y1="y(0)" :y2="y(0)" />
           <g v-for="t in ticks" :key="t">
             <text class="tick" :x="x(t)" :y="H - 1" :text-anchor="t === 0 ? 'start' : t === span ? 'end' : 'middle'">{{ t }}</text>

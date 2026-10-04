@@ -19,8 +19,8 @@ const playing = ref(false)
         </p>
       </div>
       <p class="lede">
-        I write real-time visuals for planetarium domes and festival stages, build tools that turn ideas into steps,
-        and am rarely at home. Looking for the <em>thinkers, idealists and hackers</em>.
+        I write real-time visuals for planetarium domes and festival stages, draft maps of ideas and make music with
+        others. Looking for <em>thinkers, idealists, artists and musicians</em> — and anyone entangled with AI.
       </p>
       <figure class="reel">
         <iframe
