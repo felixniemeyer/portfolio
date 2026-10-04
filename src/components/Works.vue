@@ -18,7 +18,9 @@ import { works } from '../data'
           :class="{ wide: work.wide }"
           :style="{ '--hue': work.hue }"
         >
-          <div class="media" :class="{ contain: work.contain, pair: work.images }">
+          <div class="media" :class="{ contain: work.contain, pair: work.images }"
+            :style="{ '--n': work.images?.length }"
+          >
             <img v-for="src in work.images" :key="src" :src="src" :alt="work.title" loading="lazy" decoding="async" />
             <img
               v-if="work.youtube || work.image"
@@ -108,9 +110,11 @@ import { works } from '../data'
 
     &.pair {
       display: flex;
-      aspect-ratio: 9 / 8;
+      /* portrait 9:16 frames, side by side */
+      aspect-ratio: calc(var(--n) * 9) / 16;
       & img {
-        width: 50%;
+        min-width: 0;
+        flex: 1;
       }
     }
 

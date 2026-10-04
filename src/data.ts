@@ -95,7 +95,7 @@ export const works: Work[] = [
     text: 'The audience picks up their phones and steers the planetarium together — orientation sensors fly a shared camera through raymarched worlds, over WebRTC.',
     link: 'https://www.instagram.com/reel/Da-R67aO0nX/',
     code: 'https://github.com/felixniemeyer/domecontrol',
-    images: ['/img/domecontrol-phone.webp', '/img/domecontrol-dome.webp'],
+    images: ['/img/domecontrol-phone.webp', '/img/domecontrol-dome.webp', '/img/domecontrol-3.webp'],
     hue: 200,
   },
   {
