@@ -108,7 +108,7 @@ import { works } from '../data'
 
     &.pair {
       display: flex;
-      aspect-ratio: 32 / 9;
+      aspect-ratio: 9 / 8;
       & img {
         width: 50%;
       }

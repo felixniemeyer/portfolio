@@ -97,7 +97,6 @@ export const works: Work[] = [
     code: 'https://github.com/felixniemeyer/domecontrol',
     images: ['/img/domecontrol-phone.webp', '/img/domecontrol-dome.webp'],
     hue: 200,
-    wide: true,
   },
   {
     title: 'Von Ton zu Ton',
