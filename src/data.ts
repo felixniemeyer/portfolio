@@ -14,7 +14,7 @@ export const mentionables: Mentionable[] = [
   { year: '2026', title: 'Aimparency — OpenAI Build Week entry, developer tools', tag: 'tools', link: 'https://github.com/aimparency/v7' },
   { year: '2026', title: 'Guest lecture on real-time fulldome visuals, round two', where: 'Hochschule Bremen', tag: 'teaching' },
   { year: '2025', title: 'Live real-time visuals under the dome', where: 'Jena Fulldome Festival, Zeiss Planetarium', tag: 'visuals' },
-  { year: '2025', title: 'Janus Award, newcomer category — AI-assisted fulldome film', tag: 'visuals' },
+  { year: '2025', title: 'Janus Award, newcomer category — AI-assisted fulldome film', where: 'Jena Fulldome Festival', tag: 'visuals', link: 'https://www.youtube.com/watch?v=6438z4f0sjI' },
   { year: '2025', title: 'Guest lecture: programming visuals for planetaria', where: 'Hochschule Bremen', tag: 'teaching' },
   { year: '2025', title: 'Online workshop: fulldome visuals with modern AI tools', where: 'TH Lübeck', tag: 'teaching', link: 'https://dlc.sh/lernangebot/5519' },
   { year: '2025', title: 'Festival WiFi for ~5000 people via Starlink + 5G fallback', where: 'Wilde Möhre', tag: 'life' },
@@ -70,6 +70,15 @@ export const works: Work[] = [
     youtube: 'ACkpjPBUipg',
     hue: 300,
     wide: true,
+    contain: true,
+  },
+  {
+    title: 'reply',
+    kind: 'fulldome film · Janus Award, newcomer',
+    text: 'A three-minute fulldome film my team and I made in 2023 with AI tools (Stable Diffusion, ComfyUI). Awarded at the Jena Fulldome Festival 2025.',
+    link: 'https://www.youtube.com/watch?v=6438z4f0sjI',
+    youtube: '6438z4f0sjI',
+    hue: 30,
     contain: true,
   },
   {
@@ -136,6 +145,7 @@ export const works: Work[] = [
     kind: 'PyTorch',
     text: 'A network that anticipates kick and snare onsets in live audio, so visuals can hit on the beat instead of after it.',
     link: 'https://github.com/felixniemeyer/dance',
+    image: '/img/dance.webp',
     hue: 290,
   },
   {
