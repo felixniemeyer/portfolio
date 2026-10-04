@@ -18,7 +18,8 @@ import { works } from '../data'
           :class="{ wide: work.wide }"
           :style="{ '--hue': work.hue }"
         >
-          <div class="media" :class="{ contain: work.contain }">
+          <div class="media" :class="{ contain: work.contain, pair: work.images }">
+            <img v-for="src in work.images" :key="src" :src="src" :alt="work.title" loading="lazy" decoding="async" />
             <img
               v-if="work.youtube || work.image"
               :src="work.youtube ? `https://i.ytimg.com/vi/${work.youtube}/hqdefault.jpg` : work.image"
@@ -26,7 +27,7 @@ import { works } from '../data'
               loading="lazy"
               decoding="async"
             />
-            <div v-else class="rings"></div>
+            <div v-else-if="!work.images" class="rings"></div>
             <span v-if="work.youtube" class="play" aria-hidden="true"></span>
           </div>
           <div class="body">
@@ -103,6 +104,14 @@ import { works } from '../data'
       object-fit: cover;
       display: block;
       transition: transform 0.8s var(--ease);
+    }
+
+    &.pair {
+      display: flex;
+      aspect-ratio: 32 / 9;
+      & img {
+        width: 50%;
+      }
     }
 
     &.contain {

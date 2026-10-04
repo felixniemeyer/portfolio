@@ -45,6 +45,8 @@ export interface Work {
   text: string
   link: string
   image?: string
+  // shown side by side instead of image
+  images?: string[]
   youtube?: string
   hue: number
   wide?: boolean
@@ -93,7 +95,9 @@ export const works: Work[] = [
     text: 'The audience picks up their phones and steers the planetarium together — orientation sensors fly a shared camera through raymarched worlds, over WebRTC.',
     link: 'https://www.instagram.com/reel/Da-R67aO0nX/',
     code: 'https://github.com/felixniemeyer/domecontrol',
+    images: ['/img/domecontrol-phone.webp', '/img/domecontrol-dome.webp'],
     hue: 200,
+    wide: true,
   },
   {
     title: 'Von Ton zu Ton',
