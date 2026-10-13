@@ -138,3 +138,55 @@ section.panel {
   background: var(--pink);
   color: var(--bg);
 }
+
+/* A4 export, see scripts/pdf.mjs */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 0;
+    background: #05050a;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  nav,
+  .filters,
+  .legend,
+  .reach button {
+    display: none !important;
+  }
+
+  [data-reveal],
+  .hero * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-block: 64px !important;
+  }
+
+  section.panel {
+    padding-block: 56px;
+  }
+
+  article,
+  li,
+  figure,
+  blockquote,
+  .life,
+  .side > div,
+  .head {
+    break-inside: avoid;
+  }
+
+  .head {
+    break-after: avoid;
+  }
+}
