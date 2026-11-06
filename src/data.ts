@@ -11,8 +11,15 @@ export interface Mentionable {
 }
 
 export const mentionables: Mentionable[] = [
+  { year: '2026', title: 'Staying at a co-living and event venue in the Austrian Alps', where: 'Commons Hub, Hirschwang', tag: 'life', link: 'https://commons-hub.at' },
+  { year: '2026', title: 'Set up a server with ERPNext, Jitsi and Vaultwarden, plus lots of Cloudflare MCP work', where: 'Commons Hub', tag: 'tools' },
+  { year: '2026', title: 'Vibe-coded the Winter Co-Living 2027 open call site', where: 'Commons Hub', tag: 'tools', link: 'https://coliving.commons-hub.at' },
+  { year: '2026', title: 'Vibe-coded the Hack the Hub: Automaton site', where: 'Commons Hub', tag: 'tools', link: 'https://automaton.commons-hub.at' },
+  { year: '2026', title: 'Vibe-coded the site for A Gathering at the Edge of Time', where: 'Commons Hub', tag: 'tools', link: 'https://edge-of-time.commons-hub.at' },
+  { year: '2026', title: 'Vibe-coded Laser Labels', where: 'Commons Hub', tag: 'tools', link: 'https://laser-labels.commons-hub.at' },
   { year: '2026', title: 'Aimparency — OpenAI Build Week entry, developer tools', tag: 'tools', link: 'https://github.com/aimparency/v7' },
   { year: '2026', title: 'Guest lecture on real-time fulldome visuals, round two', where: 'Hochschule Bremen', tag: 'teaching' },
+  { year: '2026', title: 'Interactive live show: audience phones fly one shared camera, visuals synced to the DJ', where: 'Jena Fulldome Festival, Zeiss Planetarium', tag: 'visuals', link: 'https://github.com/felixniemeyer/domecontrol' },
   { year: '2025', title: 'Live real-time visuals under the dome', where: 'Jena Fulldome Festival, Zeiss Planetarium', tag: 'visuals' },
   { year: '2025', title: 'Janus Award, newcomer category — AI-assisted fulldome film', where: 'Jena Fulldome Festival', tag: 'visuals', link: 'https://www.youtube.com/watch?v=6438z4f0sjI' },
   { year: '2025', title: 'Guest lecture: programming visuals for planetaria', where: 'Hochschule Bremen', tag: 'teaching' },
@@ -22,7 +29,7 @@ export const mentionables: Mentionable[] = [
   { year: '—', title: 'Recorded jam sessions with friends', where: 'Hupfeldcenter, Leipzig', tag: 'music', link: 'https://soundcloud.com/fairlix/sets/hupfeldcenter-leipzig-jam-session-recordings' },
   { year: '2024', title: 'Browser-based projection mapping, Triebwerke stage', where: 'Fusion Festival', tag: 'visuals', link: 'https://www.youtube.com/watch?v=Mu_5WgnE25M' },
   { year: '2024', title: 'Gliders VR, Dragons, Music Box — WebXR & WebAudio pieces', tag: 'visuals', link: 'https://gfx.aimparency.org/gliders-vr/' },
-  { year: '2023', title: 'Taught a neural net to anticipate kicks and snares in real time', tag: 'music', link: 'https://github.com/felixniemeyer/dance' },
+  { year: '2023', title: 'Taught a neural net to keep visuals in sync with live music', tag: 'music', link: 'https://github.com/felixniemeyer/dance' },
   { year: '2023', title: 'End-of-line driver', where: 'Tesla Gigafactory Berlin', tag: 'life' },
   { year: '2023', title: 'Spacies — artwork with its own NFT contract on Ethereum mainnet', tag: 'web3', link: 'https://opensea.io/collection/spacies' },
   { year: '2022', title: 'Von Ton zu Ton — AR sound sculptures, three exhibitions', where: 'D&C Studio, motion.lab, Lobe Block', tag: 'music', link: 'https://www.youtube.com/watch?v=EfrT8ds3aJU' },
@@ -144,7 +151,7 @@ export const works: Work[] = [
   {
     title: 'Dance',
     kind: 'PyTorch',
-    text: 'A network that anticipates kick and snare onsets in live audio, so visuals can hit on the beat instead of after it.',
+    text: 'A network that takes the DJ\'s signal and estimates musical phase live, automating beat tapping and time-signature guessing, so visuals stay in sync.',
     link: 'https://youtu.be/BbwrgiBensQ',
     code: 'https://github.com/felixniemeyer/dance',
     image: '/img/dance.webp',
@@ -226,7 +233,7 @@ export const music = {
   built: [
     { title: 'a-jam', text: 'turn-based jam sessions in the browser', link: 'https://ajam.aimparency.org/loadSession/60255ef63fc2a03b93b7a18444ca0328' },
     { title: 'Von Ton zu Ton', text: 'AR shapes you can play', link: 'https://www.youtube.com/watch?v=EfrT8ds3aJU' },
-    { title: 'Dance', text: 'a net that hears the kick coming', link: 'https://github.com/felixniemeyer/dance' },
+    { title: 'Dance', text: 'a net that keeps visuals in sync with the DJ', link: 'https://github.com/felixniemeyer/dance' },
     { title: 'Music Box', text: 'my first WebAudio piece', link: 'https://gfx.aimparency.org/music-box/' },
   ] as Track[],
 }

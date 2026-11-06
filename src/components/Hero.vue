@@ -21,6 +21,8 @@ const playing = ref(false)
       <p class="lede">
         I write real-time visuals for planetarium domes and festival stages, draft maps of ideas and make music with
         others. Looking for <em>thinkers, idealists, artists and musicians</em> — and anyone entangled with AI.
+        Currently staying at the <a href="https://commons-hub.at" target="_blank" rel="noopener">Commons Hub</a> in the
+        Austrian Alps.
       </p>
       <figure class="reel">
         <iframe
